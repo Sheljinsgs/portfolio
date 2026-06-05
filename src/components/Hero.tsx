@@ -79,7 +79,7 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                href="/resume.pdf"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/resume.pdf`}
                 download
                 className="px-8 py-4 bg-white/5 text-white font-bold rounded-xl border border-white/10 flex items-center gap-2 hover:bg-white/10 transition-all glass-card"
               >
@@ -98,7 +98,7 @@ const Hero = () => {
           >
             <div className="relative w-full max-w-sm mx-auto lg:mx-0 lg:ml-auto aspect-[3/4] rounded-[3rem] overflow-hidden bg-[#0a0a0a] shadow-[0_0_40px_rgba(0,242,254,0.2)] p-2 glow-border group">
               <img
-                src="/images/profile.jpg"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/profile.jpg`}
                 alt="Professional Profile"
                 className="w-full h-full object-cover object-top rounded-[2.5rem] grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                 onError={(e) => {

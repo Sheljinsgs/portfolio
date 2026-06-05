@@ -79,7 +79,7 @@ const Resume = () => {
             <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/resume.pdf"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/resume.pdf`}
                 download
                 className="w-full sm:w-auto px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-2xl flex items-center justify-center gap-3 transition-all hover:shadow-[0_0_20px_rgba(0,242,254,0.4)] border border-white/10"
             >

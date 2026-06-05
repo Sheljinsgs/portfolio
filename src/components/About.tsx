@@ -32,7 +32,7 @@ const About = () => {
           <div className="absolute -inset-4 bg-cyan-500/20 rounded-3xl blur-2xl group-hover:bg-cyan-500/30 transition-all duration-300"></div>
           <div className="relative aspect-[3/4] max-w-md mx-auto rounded-3xl overflow-hidden bg-[#0a0a0a] shadow-[0_0_30px_rgba(0,242,254,0.15)] p-2 glow-border">
             <img
-              src="/images/profile.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/profile.jpg`}
               alt="Profile"
               className="w-full h-full object-cover object-top rounded-2xl grayscale transition-all duration-500 group-hover:grayscale-0"
               onError={(e) => {
