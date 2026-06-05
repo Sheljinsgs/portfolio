@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00f2fe;
+  --color-secondary: #4facfe;
+  --color-accent: #111827;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+}
+
+:root {
+  --background: #050505;
+  --foreground: #e2e8f0;
+  --primary: #00f2fe;
+  --secondary: #4facfe;
+  --accent: #111827;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  /* Dark mode background mesh */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.08) 0, transparent 40%),
+    radial-gradient(at 100% 0%, rgba(79, 172, 254, 0.08) 0, transparent 40%),
+    radial-gradient(at 50% 100%, rgba(139, 92, 246, 0.05) 0, transparent 40%);
+  background-attachment: fixed;
+}
+
+.section-padding {
+  @apply py-24 px-6 sm:px-12 lg:px-24;
+}
+
+/* Glassmorphism utilities for dark mode */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+}
+
+.glass-card {
+  @apply bg-[#0f1115]/80 backdrop-blur-md border border-white/5 shadow-xl;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600;
+}
+
+.glow-border {
+  @apply relative before:absolute before:-inset-[1px] before:rounded-[inherit] before:bg-gradient-to-r before:from-cyan-500 before:via-blue-500 before:to-purple-600 before:opacity-0 before:transition-opacity hover:before:opacity-100 before:-z-10;
+}
+
+/* Custom Modern Scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1f2937 #050505;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 8px;
+  border: 2px solid #050505;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
